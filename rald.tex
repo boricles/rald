@@ -1,0 +1,111 @@
+\documentclass{llncs}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\algtext*{EndFor}
+\algtext*{EndIf}
+\algtext*{EndProcedure}
+%\usepackage[noend]{algorithmic}
+
+\usepackage{authblk}
+\usepackage{amsmath}
+\usepackage{ulem}
+\usepackage{color}
+\usepackage{courier}
+\usepackage{dl}
+\usepackage{graphicx}
+\usepackage{helvet}
+\usepackage{ifsym}
+\usepackage{multirow}
+\usepackage{textcomp}
+\usepackage{theorem}
+\usepackage{times}
+\usepackage{url}
+\usepackage{wasysym}
+\usepackage{paralist}
+\usepackage{listings}
+
+\usepackage[T1]{fontenc}
+
+%\newdef{definition}{Definition}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}{Lemma}
+%\newtheorem{proposition}{Proposition}
+%\newdef{example}{Example}
+\newcommand{\todo}[1]{\textcolor{red}{[#1]}\xspace}
+
+\newcommand{\qn}[2]{\ensuremath{#1\mbox{:}#2}\xspace}
+
+\newcommand{\tr}[3]{<\ensuremath{#1,#2,#3}>\xspace}
+
+\newcommand{\B}{\ensuremath{\mathcal{B}}\xspace}
+
+\newcommand{\V}{\ensuremath{\mathcal{V}}\xspace}
+
+\renewcommand{\L}{\ensuremath{\mathcal{L}}\xspace}
+
+\renewcommand{\KB}{\ensuremath{g}\xspace}
+
+
+\newlength{\hiindent}
+\setlength{\hiindent}{0.5cm}
+\newcommand{\hi}[1]{\hspace*{#1 \hiindent}}
+
+\makeatletter
+\let
+\@copyrightspace
+\relax
+\makeatother
+
+
+\title{How Redundant Is It? - An Empirical Analysis on Linked Datasets}
+
+\author{Honghan Wu\inst{1} \and Boris Villazon-Terrazas\inst{2} \and Jeff Z. Pan\inst{1} \and Jose Manuel Gomez-Perez\inst{2}}
+%
+\authorrunning{Wu et al.}   % abbreviated author list (for running head)
+%
+%%%% list of authors for the TOC (use if author list has to be modified)
+%\tocauthor{Panos Alexopoulos, Manolis Wallace}
+%
+\institute{Department of
+Computing Science, University of Aberdeen, UK \and
+iSOCO, Intelligent Software Components S.A., Spain}
+
+\begin{document}
+
+
+\maketitle
+
+\begin{abstract}
+While there are some popular vocabularies widely used across linked open data, many linked data sets do not have T-Box axioms at all. How does such fact, i.e., the usage patterns on T-Boxes, affect the linked data consumption? This might be an interesting question to be asked by linked data consumers. In this paper, we analysis one particular aspect of this question i.e., redundancy analysis, on several popular datasets and vocabularies in web of data. We start with the analysis on semantic redundancies of datasets given their T-Boxes. Then, we propose useful t-box axioms which are helpful for consumption but are absent in the dataset in question. Finally, we reveal how the linkages  of the web of data, both in concept-level and instance-level, affects data set redundancies.
+
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+\input{intro}
+
+\section{Graph Pattern Based Redundancy Identification}
+\label{sec:gp}
+
+\section{A-Box Redundancy}
+\label{sec:t-box}
+
+\section{T-Box Rules VS. A-Box Redundancy}
+\label{sec:t-box}
+
+\section{Redundancy deviation by vocabulary Linkage }
+\label{sec:vlinkage}
+
+\section{Graph Pattern Based Redundancy Identification}
+\label{sec:gp}
+
+\section{Related Work}
+\label{sec:related}
+\input{related_work}
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+\bibliographystyle{abbrv}
+\bibliography{cold}
+\end{document}
