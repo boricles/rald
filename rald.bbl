@@ -1,3 +1,34 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{calvanese2007tractable}
+D.~Calvanese, G.~De~Giacomo, D.~Lembo, M.~Lenzerini, and R.~Rosati.
+\newblock Tractable reasoning and efficient query answering in description
+  logics: The dl-lite family.
+\newblock {\em Journal of Automated reasoning}, 39(3):385--429, 2007.
+
+\bibitem{fernandez2013binary}
+J.~D. Fern{\'a}ndez, M.~A. Mart{\'\i}nez-Prieto, C.~Guti{\'e}rrez, A.~Polleres,
+  and M.~Arias.
+\newblock Binary rdf representation for publication and exchange ({HDT}).
+\newblock {\em Web Semantics: Science, Services and Agents on the World Wide
+  Web}, 19:22--41, 2013.
+
+\bibitem{halpin2010owl}
+H.~Halpin, P.~J. Hayes, J.~P. McCusker, D.~L. McGuinness, and H.~S. Thompson.
+\newblock When owl: sameas isn’t the same: An analysis of identity in linked
+  data.
+\newblock In {\em The Semantic Web--ISWC 2010}, pages 305--320. Springer, 2010.
+
+\bibitem{joshi2013logical}
+A.~K. Joshi, P.~Hitzler, and G.~Dong.
+\newblock Logical linked data compression.
+\newblock In {\em The Semantic Web: Semantics and Big Data}, pages 170--184.
+  Springer, 2013.
+
+\bibitem{wu2014ssp}
+J.~Z. Pan, J.~M.~G. P\'erez, Y.~Ren, H.~Wu, and M.~Zhu.
+\newblock {SSP}: Compressing {RDF} data by summarisation, serialisation and
+  predictive encoding.
+\newblock Manuscript submitted for CIKM, 2014.
 
 \end{thebibliography}

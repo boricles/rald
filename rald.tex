@@ -23,8 +23,10 @@
 \usepackage{wasysym}
 \usepackage{paralist}
 \usepackage{listings}
-
+\usepackage[table]{xcolor}
 \usepackage[T1]{fontenc}
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
 
 %\newdef{definition}{Definition}
 %\newtheorem{theorem}{Theorem}
@@ -84,24 +86,163 @@ While there are some popular vocabularies widely used across linked open data, m
 \label{sec:intro}
 \input{intro}
 
-\section{Graph Pattern Based Redundancy Identification}
+\section{Linked Data Redundancy Categorisation}
 \label{sec:gp}
+Before analysing the redundancy in Linked Data datasets, it makes sense to have a good understanding about the redundancy of Linked Data. In this section, we briefly discuss the categorisation of Linked Data Redundancy. Given the fact that most Linked Datasets are represented in RDF data model, in the first part of this section, we categorise the redundancies in RDF data and point out the main focuses of this paper. In addition to RDF representation, the other important characteristic of Linked Data is its \emph{linked} aspect. What are the different aspects of the \emph{linked} nature which are relevant to the redundancy of the data and how can they be effecting the redundancies? In the second subsection we try to answer these questions.
 
-\section{A-Box Redundancy}
-\label{sec:t-box}
+\subsection{Redundancy in RDF Data}
+\label{sec:rdf_redundancy}
+The representation of RDF datasets can be broken down into two levels. In the data model level, an RDF dataset is essentially a set of triples. To share or consume an RDF dataset, e.g. for storage, transmission or query-answering, it needs to be represented in the second level, i.e. the serialisation level, where it has to be serialised as a sequence of bits. In this level, an RDF dataset usually takes the form of textual or binary files by using predefined syntaxes, e.g. RDF/XML, N-Triples or even sophisticated compression format (e.g. HDT~\cite{fernandez2013binary}). Accordingly, the redundancies of RDF data reside in both levels of RDF data representation, i.e. data model level and serialisation level. 
 
-\section{T-Box Rules VS. A-Box Redundancy}
-\label{sec:t-box}
+In the data model level, the size of data can be calculated by the number of triples. Hence, in this level, the data redundancy exists if less triples can be used to represent the same semantic meanings of the original data. In the serialisation level, the data is represented as a sequence of bits. Given a fix set of triples, one serialisation is said to be more redundant than the other if it uses more bits than its counterpart. 
 
-\section{Redundancy deviation by vocabulary Linkage }
-\label{sec:vlinkage}
+In~\cite{wu2014ssp}, we proposed a fine-grained categorisation of RDF data redundancies. Table~\ref{tab:rdfrd} illustrates such categorisation of RDF redundancies and also puts it in the dimension of RDF representation levels. In this paper we mainly focus on the \emph{semantic redundancy} and the second type of syntactic redundancy, i.e. the \emph{inter-structural redundancy}. Both are highlighted with a grey background in Table~\ref{tab:rdfrd}. Semantic redundancy is selected because it can be generated or removed by the T-Box axioms of a dataset. Hence, it is of interest to most of the Linked Data consumption tasks like inference computation and ontology based data access. Syntactic redundancy is also important to data consumption because a concise serialisation is beneficial not only to data transmission but also to query answering tasks~\cite{fernandez2013binary}. In this category, a recent study~\cite{wu2014ssp} points out that most existing compression techniques, e.g.~\cite{fernandez2013binary}, cannot deal with the inter-structural one~\cite{wu2014ssp}. Hence, it is particularly interesting to analyse inter-structural redundancies in Linked Open Data.
 
-\section{Graph Pattern Based Redundancy Identification}
-\label{sec:gp}
+\begin{table*}
+\caption{RDF Data Redundancy Categorisation}
+\label{tab:rdfrd}
+\centering
+\begin{tabular}{c | c| c | c | c}
+\hline
+\multirow{2}{*}{Types} & \multirow{2}{*}{Semantic Redundancy} & \multicolumn{2}{c|}{Syntactic Redundancy} & \multirow{2}{*}{Symbolic Redundancy} \\
+\cline{3-4}
+& & Intra-structural & Inter-structural & \\
+\hline
+\hline
+ Data Model Level  & \cellcolor[rgb]{0.9,0.9,0.9}\checkmark & - & - & -  \\
+\hline
+Serialisation Level & - &\checkmark &\cellcolor[rgb]{0.9,0.9,0.9} \checkmark & \checkmark   \\
+\hline
+\end{tabular}
+\end{table*}
+
+\subsubsection{Semantic Redundancy}
+
+\begin{figure*}[t!]
+\begin{center}
+ \mbox{\includegraphics[scale=0.50, trim=36mm 21cm 6cm 1cm]{Figures/rd_example.pdf} }   
+    \hspace{3px}
+ \mbox{\includegraphics[scale=0.50, trim=45mm 21cm 6cm 1cm]{Figures/rd_semantic.pdf}}   
+\end{center}
+\caption{Original v.s. Semantically Compressed}
+\label{fig:ex_orig}
+\end{figure*}
+
+An RDF dataset is said to be semantically redundant if some triples can be removed without leading to any changes in its meaning. In most cases the removal of these triples requires additional rules to be added in the dataset so that it is possible to re-generate the removed triples when needed. The usual form of such rules is the T-Box, i.e., the concept level statements in an Ontology. For example, in Fig.~\ref{fig:ex_orig}, we have an RDF graph of $g_1$. In the FOAF ontology~\footnote{\url{http://xmlns.com/foaf/spec/}}, there is a rule of \tr{\qn{foaf}{name}} {\qn{rdfs}{domain}} {\qn{foaf}{Person}}. Based on the $rdfs2$ rule in the RDF specification, the type assertion in $g_1$, i.e. \tr{$jeff-z-pan$}{\qn{rdf}{type}} {\qn{foaf}{Person}}, can be removed, given the presence of \tr{$jeff-z-pan$}{\qn{foaf}{name}} {Jeff Z. Pan}.
+
+In a more general perspective, the semantic redundancy can be identified by co-occurrences of triple patterns (cf. the red part of $g_1$ in Fig.~\ref{fig:ex_orig}). Hence, it is not necessary to restrain the ability of semantic redundancy identification by the limitation of T-Box rules in representing triple pattern co-occurrences. In this regard, Joshi et al.~\cite{joshi2013logical}  applied association rule mining approach to identify the co-occurrences in terms of association rules. We apply a graph pattern based rule system to represent the semantic redundancies. For example, in Fig.~\ref{fig:ex_orig}, $g_2$ has less triples than $g_1$ but the two are semantically equivalent. The redundancy in $g_1$ is represented by the graph pattern rule in the upper part of $g_2$. Obviously, graph pattern based rules can represent more complex triple co-occurrences than T-Box rules.
+
+\subsubsection{Inter-structure Syntactic Redundancy}
+As shown in Table~\ref{tab:rdfrd}, the other two types of redundancies, i.e. syntactic and symbolic ones, both resides in the serialisation level. Their volume can be evaluated using the number of bits used in the serialisation. To separate the two, we can use a simple formula $|F| = n \times r$, where $F$ is the serialisation file, $n$ is the number of resource occurrences and $r$ is the average bits needed to represent a resource. The syntactic redundancies reside in the component of $n$, while the symbolic ones are in $r$.
+
+Most existing serialisation approaches apply syntaxes to reduce $n$. The idea is to group triples by subjects or objects so that the multiple occurrences of the same resource only need to be serialised once. For example, the RDF/XML serialisation standard provides abbreviation and striping syntaxes. However, such syntaxes only work on concrete graph structures. Similar graph structures (i.e. graph patterns)  which repeatedly occur in the data are not taken into account. In the following example, the graph pattern $GP$ has two instances of $Inst_1$ and $Inst_2$. The structure of $GP$ appears twice in both instances. This means that each of the two predicate resources of $GP$, i.e. \qn{foaf}{name} and \qn{foaf}{made}, has two occurrences in its instances, which is avoidable when $GP$ structure (stored wherever) is referred instead of duplicated in both instances.
+
+\scriptsize
+\begin{align}
+GP: &\tr{?U} {\qn{foaf}{name}} {?Y},  \tr {?U}{\qn{foaf}{made}} {?Z}\nonumber\\ 
+Inst_1: &\tr{\text{\it jeff-z-pan}} {\qn{foaf}{name}} {\text{Jeff Z. Pan}},  \tr {?U}{\qn{foaf}{made}} {ISWC09\_423}\nonumber\\ 
+Inst_2: &\tr{jose} {\qn{foaf}{name}} {\text{Jose Manuel Gomez Perez}},  \tr {?U}{\qn{foaf}{made}} {ISWC13\_1xx}\nonumber
+\end{align}
+\normalsize
+
+We use the term of \emph{intra-structural redundancy}  to denote the unnecessary resource occurrences in concrete graph structure, while  the term of \emph{inter-structural redundancy} is used for the unnecessary resource occurrences of graph patterns in its instances. Most of existing serialisation approaches do not provide facilities to identify graph patterns. Hence, they leave the inter-structural redundancy untouched.
+
+\subsection{Redundancy in Linked Data}
+One of the most important characteristics of Linked Data is its \emph{linking} capability, which is to create connections from one information source to the other. The connection can be created in the concept level, where individuals of one dataset are described using concepts from another dataset or vocabulary. We denote this type of connections as \emph{T-Box Reuse}. The second type of connections is the linkage in individual level, where individuals in one dataset are specified to be the same as their counterparts in the other, e.g. by using \qn{owl}{sameAs} assertions. This type of connections is called as \emph{A-Box Linkage} in this paper. Both types of connections have implications in changing the semantics of the original dataset. These implications might change the redundancies of the dataset in question. In rest part of this subsection, we briefly discuss the possible changes on data redundancies caused by both types of connections.
+
+\subsubsection{T-Box Reuse}
+When an individual is described using concepts defined in another T-Box. The axioms in that T-Box will be applied to infer more assertions not only on this individual  but also potentially on other individuals which are related to it. For example, in LinkedMDB~\footnote{Linked Movie Database \url{http://data.linkedmdb.org/}}, all individuals of \qn{movie}{actor} are also asserted to be instances of \qn{foaf}{Person}. Given the axiom of 
+\scriptsize  \tr{ \qn{foaf}{Person} } { \qn{rdfs}{subClassOf} } {\qn{foaf}{Agent} }
+\normalsize
+in FOAF vocabulary, all actors in LinkedMDB  are also individuals of \qn{foaf}{Agent}. Essentially T-Box Reuse will bring new rules to the original dataset. These rules are usually from a relevant subset of the axioms of the materialised version of the reused T-Box. 
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.40, trim=36mm 21cm 9cm 3cm]{Figures/tbox_reuse.pdf}  
+\end{center}
+\caption{Data Redundancies affected by T-Box Reuse}
+\label{fig:tbox_reuse}
+\end{figure}
+
+These new rules can infer a set of new triples~\footnote{Some triples inferred by new rules might be inferred by the dataset\rq{}s own T-Box as well. To make discussion easier, we use the term {\it new triples} to denote those triples which can NOT be inferred by the dataset\rq{}s own T-Box but the new rules.} to be added in the reusing RDF dataset. Fig.~\ref{fig:tbox_reuse} illustrates a typical case where the new triples overlaps with the existing ones. In Fig.~\ref{fig:tbox_reuse}, the original RDF dataset, labelled as $g$, is denoted by the green oval, and the new set of inferred triples is denoted by the pink oval with a label of $g\rq{}$. Depending on whether they are in the overlap with existing triples, new triples can be divided into two parts. The two parts will lead to two different consequences to the redundancies of the original data. The overlap part, labelled \emph{$removable$} in Fig.~\ref{fig:tbox_reuse}, contains those triples in $g$, which can be inferred by new rules. This means that they are turned to be semantically redundant by the reused T-Box. As a consequence, the dataset turns to have more redundancies. On the contrary, the other part ($g\rq{} \setminus removable$), labelled as \emph{$derivable$} in Fig.~\ref{fig:tbox_reuse}, will decrease the data redundancy by means of increasing data compression ratio. According the definition of data compression ratio~\footnote{\url{http://en.wikipedia.org/wiki/Data_compression_ratio}}, it can be calculated as $\text{\it compression ratio}=\frac{|g| + |derivable|}{|g|}$, in which the bigger $|derivable|$ component becomes, the larger the compression ratio will be. In a word, $removable$ and $derivable$ affect the data redundancies in two opposite ways. Analyses on them will reveal the effects on data redundancy of concept-level connections between Linked Data.  
+
+\subsubsection{A-Box Linkage}
+Individual level linkages by \qn{owl}{sameAs} assertions are among the most advocated best practices in the Linked Data community. Data publishers are encouraged to provide such linkages to break the information silos. However, its semantic implications will lead to substantial inference computations across different datasets, some of which might be unexpectedly expensive. In~\cite{halpin2010owl}, Halpin et al. pointed out that {\it quick-and-dirty use of \qn{owl}{sameAs} will almost always lead to OWL Full}. The other issue is that transitive closures of \qn{owl}{sameAs} in the Web scale can easily get too large to be manageable.
+
+Despite the practical issues, we briefly discuss how the semantic implications of \qn{owl}{sameAs} links might lead to the changes in data redundancies. As supporting efficient query answering is the basis of many Linked Data consumption tasks, our discussion in this paper is based on OWL2 QL profile~\cite{calvanese2007tractable}. When an individual $i$ in dataset $D$ is asserted to be {\it sameAs} another individual $i_1$ in $D_{i_1}$, all \emph{materialised assertions} of $i_1$ in $D_{i_1}$, denoted as $A(i_1)$, are immediately true to $D$. Hence, the data of D will be $g_D \cup A(i_1)$, where $g_D$ is the original RDF graph of D. Considering OWL2 QL semantics, it is reasonable that only type assertions of $i_1$ in $D_{i_1}$ are included in $A(i_1)$ directly. Regarding other triples of $i_1$ in $D_{i_1}$, they will be simplified as existential assertions to be added.
+
+Similar to T-Box Reuse case, the adding of new data has two consequences to the data redundancy of D. The first one is some triples turned to be redundant, while they were not originally. We also use the term \emph{\it removable} to denote these triples. Let $M$ be an A-Box materialisation function. The \emph{\it removable} can be calculated by ${\it removable}=g_D \cap \big( M(g_D \cup A(i_1)) \setminus M(g_D) \big)$. The second consequence is that $g_D$\rq{}s data compression ratio can be increased, which means less redundancy. This is caused by new triples which are not in the original data and turn to be derivable after adding $A(i_1)$, while they could not be derived before that. The term \emph{\it derivable} is used to denote such triples, which can be calculated by $derivable=\big( M(g_D \cup A(i_1)) \setminus M(g_D) \big) \setminus g_D$.
+
+
+\section{Two Dimension Analysis}
+\label{sec:method}
+
+According to above discussions, the redundancies in Linked Data can be analysed from two dimensions (cf. Fig.~\ref{fig:twod}). The first dimension is that of the RDF data redundancy, where the focus is to reveal different categories of redundancies from data model level to serialisation level. The second dimension is from the \emph{linked} semantic point of view, where the focus is to analyse the data redundancy based on different types of semantics. The {\it A-Box } semantics is to analyse the data redundancy only from data level without any T-Box axioms. The other three types are considering both data and T-Box information. The {\it No Linkage} semantics is to do the analysis based on the dataset\rq{}s main T-Box. The main T-Box is the one which is defined and published by the data provider. It is not necessary that every dataset has a main T-Box. In such cases, this analysis is not applicable. The {\it T-Box Reuse} semantics is the type of analysis focusing on redundancy changes caused by concept level connections, i.e. reusing T-Box, while the {\it A-Box Linkage} is to reveal the changes of data redundancies caused by the individual level connections.
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.40, trim=6cm 9cm 6cm 1cm]{Figures/two_dimension.pdf}  
+\end{center}
+\caption{Two Dimension Analysis on Linked Data Redundancy}
+\label{fig:twod}
+\end{figure}
+
+In the matrix of Fig.~\ref{fig:twod}, there are total 6 valid types of analyses. In this paper, we focus on four of them, which are marked with ticks in the figure. For {\it A-Box} semantics, we propose a graph pattern based approach to reveal the semantic and syntactic (inter-structure only) redundancies. Based on the graph pattern approach, we propose a virtual materialisation approach to analyse data redundancies in {\it No Linkage} and {\it T-Box Reuse} semantics. The other two types of analyses are left for future work.
+
+
+\subsection{Graph Pattern Based Analysis Method}
+As discussed in section~\ref{sec:rdf_redundancy}, we focus on semantic redundancy and the inter-structural syntactic redundancy, both of which will be benefited from the ability to identify frequent graph patterns. For semantic redundancy, identified graph patterns can be used to identify possible rules for removing redundant triples. Combined with the knowledge of instance numbers of these graph patterns, these rules can be used to calculate the volume of semantic redundancy as number of removable triples. Similarly, for inter-structural redundancy, the structure of graph patterns and their instances numbers can give us a way to calculate the volume of syntactic redundancy in the data. In this subsection, we describe an entity description pattern based approach for redundancy analysis.
+
+In an RDF graph, we call its non-literal nodes as entities. For an entity $e$ in an RDF graph $G$, we can get a data block for it by extracting triples in $G$ each of which has $e$ as its subject or object. We call such kind of data blocks as Entity Description Blocks (EDBs for short). 
+
+For an EDB, it can be summarised by a notion of entity description pattern which is defined in Definition~\ref{def:edp}. \emph{EDP}, the short name for entity description pattern, is the building block of our analysis approach. 
+
+\begin{definition}
+\label{def:edp} 
+(Entity Description Pattern) Given an entity description block $B_e$, its description pattern is a tuple $P_e=(C_e,A_e,R_e,V_e)$, where
+\begin{itemize}
+\item $C_e=\{c_i |<e, rdf:type,c_i> \in G\}$   is called as the class component; 
+\item $A_e=\{p_i |<e,p_i,l_i> \in G \text{ and $l_i$  is a literal}\}$  is called as the attribute component;
+\item $R_e=\{r_i |<e,r_i,o_i> \in G \text{ and $o_i$  is a URI resource or blank node}\}$  is called as the relation component;
+\item $V_e=\{v_i |<s_i,v_i,e> \in G\}$ is called as the inverse relation component.
+\end{itemize}
+\end{definition}
+
+Taking the RDF graph $g_1$ in Fig.~\ref{fig:ex_orig} for example, the EDP of entity {\it jeff-z-pan} is $\big( \{\qn{foaf}{Person}\}, \{\qn{foaf}{name}\}, \{\qn{foaf}{made}\}, \emptyset \big)$, and the one of {\it ISWC09\_423} is $\big( \emptyset, \{\qn{rdfs}{label}\}, \emptyset , \{\qn{foaf}{made}\}\big)$. 
+
+\vspace{1ex}
+
+By generating EDPs for all entities in an RDF graph $G$, we can get a EDP representation $EDP_G$ of $G$, which is a set of EDPs. As we will show in later section, the number of EDPs in an RDF dataset is usually much less than the number of entities. This is because many entities are sharing same EDP. The more entities are sharing one EDP; the more times its structure is duplicated. Such duplications are the source of data redundancies, which we break down to semantic redundancy and syntactic redundancy.
+
+\subsubsection{Semantic Redundancy Identified By EDP} In the definition of EDP, the class component $C_e$ is a set of constant class names. Hence, it is straightforward to generate a graph pattern based substitution rule for removing these type assertions from the original data. In particular, the rule can be defined as $(\emptyset, A_e, R_e, V_2) \rightarrow (C_e,A_e,R_e,V_e)$. The number of triples can be removed is $|C_e| \times f_{P_e}$, where $f_{P_e}$ is the number of instances of EDP $P_e$. For the example of {\it jeff-z-pan} in Fig.~\ref{fig:ex_orig}, the rule will be $(\emptyset, \{\qn{foaf}{name}\}, \{\qn{foaf}{made}\}, \emptyset) \rightarrow ( \{\qn{foaf}{Person}\}, \{\qn{foaf}{name}\}, \{\qn{foaf}{made}\}, \emptyset)$. In this particular case, this rule is equivalent to the rule of \tr{\qn{foaf}{name}} {\qn{rdfs}{domain}} {\qn{foaf}{Person}} from $FOAF$ vocabulary. Although EDP based rules are more expressive than T-Box axioms, it is interesting to know the overlap of identifiable semantic redundancies between the two. In next section, we will provide results in this regard.
+
+\subsubsection{Inter-structural Syntactic Redundancy Identified By EDP} The inter-structural redundancy denotes the unnecessary structure recurrences in EDBs of graph pattern instances. Given an EDP $P_e$, it is straightforward to calculate its recurrences as $(|A_e| + |R_e| + |V_e|) \times f_{P_e}$,  the unit of which is resource occurrence.
+
+\subsubsection{Virtual A-Box Materialisation on EDP} When considering T-Box of an RDF dataset, the data redundancy might be changed due to the above-mentioned $removable$ and $derivable$ triple sets. To compute the two triple sets, inferences need to be performed on A-Boxes, which might be too expensive for large scale data analyses. For redundancy analysis purpose, we only need to know the size of $removable$ and $derivable$ sets instead of getting the exact triples. In this subsection, we propose a virtual materialisation approach based on EDP for computing the triple sizes for the two triple sets. 
+
+Given an EDP $P_e$, according OWL2 QL profile, the four components of $P_e$ are sufficient for inference computation on EDP. After applying inference rules defined in~\cite{calvanese2007tractable}, we will get a new EDP: $P_e^M=(C_e^M, A_e^M, R_e^M, V_e^M)$. The number of {\it derivable} triples can be calculated as follows. 
+
+\begin{equation}\label{eq:derivable}
+ |derivable|=f_{P_e} \times \sum_{c \in N}f(c),
+\end{equation}
+\indent {\it where $N=( C_e^M \setminus C_e ) \cup ( A_e^M \setminus A_e ) \cup ( R_e^M \setminus R_e ) \cup ( V_e^M \setminus V_e )$ and $f$ is an auxiliary dictionary of $P_e$ which stores the instantiated times of each concept in $P_e$.}
+
+\vspace{1ex}
+
+The number of {\it removable}  triples can be calculated as follows.
+\begin{equation}\label{eq:removable}
+ |removable|=f_{P_e} \times \sum_{c \in E}f(c),
+\end{equation}
+\indent {\it where $E=( C_e^M \cap C_e ) \cup ( A_e^M \cap A_e ) \cup ( R_e^M \cap R_e ) \cup ( V_e^M \cap V_e )$.}
+
+\subsection{The Metrics}
 
 \section{Related Work}
 \label{sec:related}
 \input{related_work}
+
+\section{Linked Dataset Analysis}
+\label{sec:result}
 
 \section{Conclusion}
 \label{sec:conclusion}
@@ -109,3 +250,5 @@ While there are some popular vocabularies widely used across linked open data, m
 \bibliographystyle{abbrv}
 \bibliography{cold}
 \end{document}
+
+
