@@ -47,6 +47,8 @@
 
 \renewcommand{\KB}{\ensuremath{g}\xspace}
 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\newcommand{\tab}[1]{\hspace{.2\textwidth}\rlap{#1}}
 
 \newlength{\hiindent}
 \setlength{\hiindent}{0.5cm}
@@ -225,7 +227,7 @@ Given an EDP $P_e$, according OWL2 QL profile, the four components of $P_e$ are 
 \begin{equation}\label{eq:derivable}
  |derivable|=f_{P_e} \times \sum_{c \in N}f(c),
 \end{equation}
-\indent {\it where $N=( C_e^M \setminus C_e ) \cup ( A_e^M \setminus A_e ) \cup ( R_e^M \setminus R_e ) \cup ( V_e^M \setminus V_e )$ and $f$ is an auxiliary dictionary of $P_e$ which stores the instantiated times of each concept in $P_e$.}
+\indent {\it where $N=( C_e^M \setminus C_e ) \cup ( A_e^M \setminus A_e ) \cup ( R_e^M \setminus R_e ) \cup ( V_e^M \setminus V_e )$ and $f$ is an auxiliary dictionary  which stores the instantiated times of each concept in $P_e \cup P_e^M$.}
 
 \vspace{1ex}
 
@@ -235,15 +237,179 @@ The number of {\it removable}  triples can be calculated as follows.
 \end{equation}
 \indent {\it where $E=( C_e^M \cap C_e ) \cup ( A_e^M \cap A_e ) \cup ( R_e^M \cap R_e ) \cup ( V_e^M \cap V_e )$.}
 
-\subsection{The Metrics}
-
 \section{Related Work}
 \label{sec:related}
 \input{related_work}
 
-\section{Linked Dataset Analysis}
+\section{Redundancy Analysis Results on Linked Datasets}
 \label{sec:result}
+\subsection{The Metrics}
+\begin{table}
+\caption{Linked Data Redundancy Analysis Metrics}
+\label{tab:metrics}
+\centering 
+\resizebox{\textwidth}{!}{
+\begin{tabular}{c | c| p{2.2cm} | p{2.2cm} | p{2.2cm}}
+\hline
+\multicolumn{2}{c|}{ } & {\bf General Info} & {\bf Semantic@90\%} & {\bf Syntactic@90\%}\\
+\hline
+\hline
+\multicolumn{2}{c|}{A-Box} 
+%general info
+& {\it \# Triples \newline \# EDP \newline \# EDP@90\%   }
+%semantic of A-Box only
+& {\it \# RTriple \newline $RRatio_{sem}$ \newline \#GP Rules}
+%syntactic
+&  \# $RRes$ \newline $RRatio_{syn}$
+\\
+\hline
+\multirow{2}{*}{A-Box \& T-Box } & No Linkage & \multirow{2}{*}{ - }  
+%Semantic of No-Linkage
+& {\it \# derivable \newline \# removable  }
+&  \multirow{2}{*}{ - }  \\
+\cline{2-2}
+\cline{4-4}
+&  T-Box Reuse & 
+%Semantic of T-Box Reuse
+& {\it \# derivable \newline \# removable \newline  \#DTerm \newline \#RAxioms}
+&  \\
+\hline
+\end{tabular}}
+\end{table}
 
+In section~\ref{sec:method}, we pointed out the 4 types of redundancies we are going to analyse (cf. Fig.~\ref{fig:twod}). In this subsection, we break down the analysis into concrete metrics, which are summarised in Table~\ref{tab:metrics}. One strategy we apply in our analyses it to focus on data instances of most popular EDPs instead of working on all data. The idea is to maintain an efficient analysis while capturing the most part of the data. The threshold chosen is 90\%, which means that we analysis 90\% of the data. As will be shown later, in all cases of the analysed datasets, the number of EDPs of the 90\% data is much smaller than the total EDPs.  The detailed explanation of metrics is listed as follows except $derivable$ and $removable$ are already defined in section~\ref{sec:method}.
+\begin{itemize}
+\item {\bf General Info}
+	\begin{description}
+	\item[$\# Triples:$]  the total number of triples of the dataset;
+	\item[$\# EDP:$]  the total number of EDPs identified in the dataset;
+	\item[$\# EDP@90\%:$]  the minimal number of most popular EDPs the sum of whose instance numbers are not less than 90\% of the total number of entities in the dataset;
+	\end{description}
+\item {\bf A-Box - Semantic@90\%}
+	\begin{description}
+	\item[$\# RTriple:$]  the redundant triples which can be identified by EDP approach (cf. section~\ref{sec:method});
+	\item[$RRatio_{sem}:$]  the semantic redundancy ratio identified by EDP approach, i.e. $\frac{\# RTriple}{\# Triples}$;
+	\item[$\# GP Rules:$]  the number of graph pattern substitution rules needed to remove semantic redundant triples;
+	\end{description}
+\item {\bf A-Box - Syntactic@90\%}
+	\begin{description}
+	\item[$\# RRes:$]  the redundant resource occurrences of inter-structural redundancies;
+	\item[$RRatio_{syn}:$]  the syntactic redundancy ratio identified by EDP approach, i.e. $\frac{\# RRes /3}{\# Triples}$;
+	\end{description}
+\item {\bf A-Box \& T-Box - T-Box Reuse - Semantic@90\%}
+	\begin{description}
+	\item[$\# DTerm:$]  the number of terms from reused T-Box, which are directly used by current dataset;
+	\item[$\# RAxioms:$]  the number of  axioms from (materialised) reused T-Box, which are used for virtual materialisation on EDPs in the dataset.
+	\end{description}
+\end{itemize}
+
+\subsection{Datasets}
+The datasets selected for analysis are identified from Linked Open Data cloud~\footnote{\url{http://lod-cloud.net/}}. There is a coloured version~\footnote{\url{http://lod-cloud.net/versions/2011-09-19/lod-cloud_colored.html}}, which categorises the datasets in different domains. We selected 5 datasets from the Linked Open Data Cloud, which cover 5 out 6 domains listed in the coloured version. The general information about datasets is listed in Table~\ref{tab:data}.
+
+\begin{table*}
+\caption{General Information of Selected Datasets}
+\label{tab:data}
+\centering
+\begin{tabular}{p{2.2cm} | p{2.2cm}  | r| r | r }
+\hline
+Dataset &Domain  & $\#$Triples  & $\# EDP$ & $\# EDP@90\%$    \\
+\hline
+\hline
+ LinkedMDB  & Media & 6,148,121 & 10,316  &   26 \\
+ \hline
+ LOV &User-generated content & 54,630 &492	 &  15   \\
+\hline
+DBLP &Publication &  94,450,169 & 438	 & 6 \\
+\hline
+Ordnance Survey \newline (50K Gazetteer) &Geographic \newline \& Government &2,368,655	 & 6 & 1 \\
+\hline
+Ordnance Survey \newline (Code-Point) & Geographic \newline  \& Government & 33,750,456 & 19 & 2\\
+\hline
+\end{tabular}
+\end{table*}
+
+In addition to trying to have a diverse domain coverage in dataset selection, we tried to select datasets with different sizes (cf. the $\#Triples$ column). We also selected two different datasets from one particular dataset (the Ordnance Survey), which are quite different in topics and size. The main purpose is to have our sample as representative as possible, while keeping the number of datasets manageable.
+
+$\#EDP$ is a quantitative measurement about the variety of how entities are described. Although the total number of EDPs are large in some cases, e.g. LinkedMDB has more than 10 thousand EDPs, the major part of the data (90\%) resides in a very small number of EDPs in all cases. The more popular one EDP is; the more redundancy there will be. Hence, having a small number of very popular EDPs indicates a large volume of data redundancies.
+\subsection{The results}
+\subsubsection{A-Box only results}
+Table~\ref{tab:ret_abox} gives the analysis results by only considering A-Box level information. Both syntactic and semantic redundancies are analysed by EDP based approach. As for \emph{syntactic redundancies}, in all datasets, they are considerably large. The redundant ratio is more than 20\% in all cases except DBLP where the ratio is still near 6.5\%. The biggest ratio was obtained from {\it 50K Gazetteer}, which is more than 32\%. Furthermore, it is notable that we only consider inter-structural redundancy and the ratio is calculated from redundancies in 90\%  data over the whole data. This means that the overall syntactic redundancy ratio should be even more.
+
+\begin{table*}
+\caption{A-Box Only: Semantic Redundancy and Syntactic Redundancy}
+\label{tab:ret_abox}
+\centering
+\begin{tabular}{p{2.2cm} | r | r|| r | r | r}
+\hline
+\multirow{2}{*}{Dataset} & \multicolumn{2}{c||}{Syntactic Redundancy} & \multicolumn{3}{c}{Semantic Redundancy} \\
+\cline{2-3}
+\cline{3-6}
+ & $\#RRes$ & $RRatio_{syn}$ & $\#RTriple$ & $RRatio_{sem}$ & $\#GP Rules$   \\
+\hline
+\hline
+ LinkedMDB  & 4,475,952	 & 24.27\% & 610,463  &   9.93\% & 21 \\
+ \hline
+ LOV & 36,718	 & 22.40\%	 &8,845 &  16.19\% & 8	   \\
+\hline
+DBLP &18,283,964	 &  6.45\%	 & 2,901,347 &  3.07\%	 & 3 \\
+\hline
+Ordnance Survey \newline (50K Gazetteer) &2,331,720 &32.81\%	 & 259,080 & 10.94\% & 1 \\
+\hline
+Ordnance Survey \newline (Code-Point) & 27,455,294 & 27.12\% & 1,595,931 & 4.73\% & 3\\
+\hline
+\end{tabular}
+\end{table*}
+
+The right part of Table~\ref{tab:ret_abox} shows that the EDP approach can identify substantial semantic redundancies as well. More than 3\% of triples are redundant in all analysed datasets. The most semantically redundant one is {\it LOV} dataset, which has more than 16\% redundant triples. The $\# GP Rules$ column shows an interesting phenomenon, i.e. these semantic redundancies can be removed by very small number of rules. The most efficient rule set comes from {\it 50K Gazetteer}, where one single rule can remove more than 10\% triples.
+
+\subsubsection{Linked Semantics}
+Table~\ref{tab:ret_tbox} shows the data redundancies under different explicit semantics. Two types of semantics of {\it No Linkage} and {\it A-Box Reuse} are analysed. {\it No Linkage} analyses are done by considering the datasets\rq{} main T-Boxes. As shown in left part of Table~\ref{tab:ret_tbox}, {\it LinkedMDB} and {\it LOV} do not have a main T-Box. They are using concepts defined in their own name spaces but without specifications about the semantics of these concepts. Such situations are very common in Linked Data Cloud. For {\it DBLP} dataset, we identified its main T-Box as SWRC ontology~\footnote{\url{http://ontoware.org/swrc/}}. Considering this T-Box, there will be 1.6 million triples can be further derived but no triples in the dataset are removable. This means that the current data is semantically less redundant when T-Box axioms are taken into account. The case of {\it 50K Gazetteer} is similar, where main ontology of the dataset is officially published~\footnote{\url{http://data.ordnancesurvey.co.uk/datasets/os-linked-data}}. However, it is worth mentioning that the $derivable$ triples of {\it 50K Gazetteer} are even more than its original triples. In {\it Code-Point}\rq{}s case, the T-Box can help remove around 1.6 million triples. This means that these triples turn to be redundant.
+
+\begin{table*}
+\caption{Linked Semantics: Data Redundancies Considering (Linked) T-Box Axioms}
+\label{tab:ret_tbox}
+\centering
+\begin{tabular}{p{2.2cm} | r | r|| r | r | r | r}
+\hline
+\multirow{2}{*}{Dataset} & \multicolumn{2}{c||}{No Linkage} & \multicolumn{4}{c}{T-Box Reuse} \\
+\cline{2-3}
+\cline{3-7}
+ & $derivable$  & $removable$ & $derivable$  & $removable$& $\#DTerms$ & $\#RAxioms$   \\
+\hline
+\hline
+ LinkedMDB  &  -	 & -   & 1,652,385   &   0  & 2 & 6\\
+ \hline
+ LOV & -	 & -	 &2,197 &  0 & 2 & 11	   \\
+\hline
+DBLP &1,669,644		 & 0	 & 42,851,260 &  1,231,703	 & 2 & 10 \\
+\hline
+Ordnance Survey \newline (50K Gazetteer) &4,361,100 &0	 & - &- & - & - \\
+\hline
+Ordnance Survey \newline (Code-Point) & 36,706,413 & 1,595,931&- &- & - & -\\
+\hline
+\end{tabular}
+\end{table*}
+
+The right part of Table~\ref{tab:ret_tbox} gives the analysis result of considering reused T-Box axioms. 3 out of 5 datasets are reusing one popular T-Box, i.e. FOAF ontology. In {\it LOV} dataset, about 4\% new triples can be inferred by the reusing FOAF ontology. In other two cases, {\it LinkedMDB} and {\it DBLP}, a surprisingly large number of triples can be derived. Note that in all cases, the datasets are only using two terms from FOAF. Even the total number of axioms applicable for the inference is quite small (cf. $\#RAxioms$ in the table). This indicates that T-Box Reuse might lead to substantial $derivable$ triples even the number of reused terms is very small.
+
+\subsubsection{Comparisons}
+\begin{figure*}[t!]
+\begin{center}
+ \mbox{\includegraphics[scale=0.135, trim=0cm 0cm 0cm 2cm]{Figures/cmp_removable.pdf}   }   
+    \hspace{2px}
+ \mbox{\includegraphics[scale=0.21, trim=0cm 2cm 0cm 2cm]{Figures/cmp_sem2syn.pdf}  }   
+   \hspace{2px}
+ \mbox{\includegraphics[scale=0.26, trim=0cm 6cm 0cm 2cm]{Figures/cmp_linked.pdf}  }   
+\end{center}
+\caption{Comparisons: \scriptsize A. {\it EDP VS. T-Box}; B. {\it Semantic VS. Syntactic}; C. {\it No Linkage VS. T-Box Reuse}. \normalsize}
+\label{fig:cmp}
+\end{figure*}
+
+The top-left figure in Fig.~\ref{fig:cmp} compares the volumes of semantic redundancies identified by EDP approach ($\#RTriples$) and T-Box axioms ($Removable$). The $Removable$ in the figure is the sum of $Removable$s of both {\it No Linkage} and {\it T-Box Reuse}. The EDP approach is much better than T-Box based approach. This means that generalised rule system might be able to identify more semantic redundancies than T-Box rules. 
+
+The top-right figure illustrates the comparison of semantic redundancy and syntactic redundancy. In all cases, the semantic one is less. The Sum of the two gives an idea about the overall data redundancies in these datasets. In 4 out of 5 datasets, the redundancy is more than 30\%. The largest one is {\it 50K Gazetteer}, which has 44\% redundant data, and {\it DBLP} is least redundant dataset with about 15\% redundancy.
+
+The bottom figure in Fig.~\ref{fig:cmp} shows the differences in the size of A-Box serialisation before and after T-Box reuse. In the figure, the size of serialisation is illustrated using the percentage: $Percentage=\frac{|\text{A-Box Materialisation}|}{|\text{Original A-Box}|}$. In all cases, the serialisation increases. More than 26\% increment for {\it LinkedMDB} and nearly 70\% for DBLP. 
 \section{Conclusion}
 \label{sec:conclusion}
 

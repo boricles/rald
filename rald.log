@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.12.10)  13 JUL 2014 15:25
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.12.10)  14 JUL 2014 17:55
 entering extended mode
 **C:/Users/honghan.wu/Documents/GitHub/rald/rald.tex
 (C:/Users/honghan.wu/Documents/GitHub/rald/rald.tex
@@ -783,26 +783,26 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
 \hiindent=\skip66
 
 (C:\Users\honghan.wu\Documents\GitHub\rald\rald.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 75.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 77.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 75.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 77.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -824,26 +824,26 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 \c@lstlisting=\count180
  ABD: EveryShipout initializing macros
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 78.
-LaTeX Font Info:    Try loading font information for U+msa on input line 78.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 80.
+LaTeX Font Info:    Try loading font information for U+msa on input line 80.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 78.
+LaTeX Font Info:    Try loading font information for U+msb on input line 80.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 78.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 80.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wasysym\uwasy.fd"
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 80.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 82.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 85.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 87.
 
 (C:\Users\honghan.wu\Documents\GitHub\rald\intro.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
@@ -851,7 +851,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 ) [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (5.85551pt too wide) in paragraph at lines 105--117
+Overfull \hbox (5.85551pt too wide) in paragraph at lines 107--119
  [][] 
  []
 
@@ -859,16 +859,16 @@ Overfull \hbox (5.85551pt too wide) in paragraph at lines 105--117
 File: Figures/rd_example.pdf Graphic file (type pdf)
 
 <use Figures/rd_example.pdf>
-Package pdftex.def Info: Figures/rd_example.pdf used on input line 123.
+Package pdftex.def Info: Figures/rd_example.pdf used on input line 125.
 (pdftex.def)             Requested size: 161.91653pt x 109.34724pt.
 
 <Figures/rd_semantic.pdf, id=13, 596.98032pt x 844.65562pt>
 File: Figures/rd_semantic.pdf Graphic file (type pdf)
 
 <use Figures/rd_semantic.pdf>
-Package pdftex.def Info: Figures/rd_semantic.pdf used on input line 125.
+Package pdftex.def Info: Figures/rd_semantic.pdf used on input line 127.
 (pdftex.def)             Requested size: 149.11284pt x 109.34724pt.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 131.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 133.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
@@ -882,17 +882,17 @@ n a single page
 File: Figures/tbox_reuse.pdf Graphic file (type pdf)
 
 <use Figures/tbox_reuse.pdf>
-Package pdftex.def Info: Figures/tbox_reuse.pdf used on input line 161.
+Package pdftex.def Info: Figures/tbox_reuse.pdf used on input line 163.
 (pdftex.def)             Requested size: 102.3143pt x 44.84074pt.
  [4 <C:/Users/honghan.wu/Documents/GitHub/rald/Figures/tbox_reuse.pdf>] [5]
 <Figures/two_dimension.pdf, id=87, 722.7pt x 542.025pt>
 File: Figures/two_dimension.pdf Graphic file (type pdf)
 
 <use Figures/two_dimension.pdf>
-Package pdftex.def Info: Figures/two_dimension.pdf used on input line 184.
+Package pdftex.def Info: Figures/two_dimension.pdf used on input line 186.
 (pdftex.def)             Requested size: 152.50407pt x 102.99715pt.
  [6 <C:/Users/honghan.wu/Documents/GitHub/rald/Figures/two_dimension.pdf>]
-Overfull \hbox (43.10466pt too wide) in paragraph at lines 217--218
+Overfull \hbox (43.10466pt too wide) in paragraph at lines 219--220
 $\OML/cmm/m/it/10 P[]$\T1/ptm/m/n/10 . For the ex-am-ple of \T1/ptm/m/it/10 jef
 f-z-pan \T1/ptm/m/n/10 in Fig. 1[], the rule will be $\OT1/cmr/m/n/10 (\OMS/cms
 y/m/n/10 ;\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 foaf[]name\OMS/
@@ -901,36 +901,87 @@ MS/cmsy/m/n/10 g\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 ;\OT1/cmr/m/n/10 ) \OMS/cms
 y/m/n/10 !$
  []
 
-[7] (C:\Users\honghan.wu\Documents\GitHub\rald\related_work.tex)
-(C:\Users\honghan.wu\Documents\GitHub\rald\rald.bbl [8]) [9]
-(C:\Users\honghan.wu\Documents\GitHub\rald\rald.aux) ) 
+[7] (C:\Users\honghan.wu\Documents\GitHub\rald\related_work.tex) [8]
+Overfull \hbox (16.71614pt too wide) in paragraph at lines 291--292
+[]\T1/ptm/m/n/10 the se-man-tic re-dun-dancy ra-tio iden-ti-fied by EDP ap-proa
+ch, i.e. $[]$; 
+ []
+
+
+Overfull \hbox (13.74477pt too wide) in paragraph at lines 297--298
+[]\T1/ptm/m/n/10 the syn-tac-tic re-dun-dancy ra-tio iden-ti-fied by EDP ap-pro
+ach, i.e. $[]$; 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--307
+ [][]$\T1/pcr/m/n/9 http : / / lod-[]cloud . net / versions / 2011-[]09-[]19 / 
+lod-[]cloud _ colored .$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--320
+[]|\T1/ptm/m/n/9 User-generated
+ []
+
+[9] [10] [11] <Figures/cmp_removable.pdf, id=133, 1228.59pt x 794.97pt>
+File: Figures/cmp_removable.pdf Graphic file (type pdf)
+
+<use Figures/cmp_removable.pdf>
+Package pdftex.def Info: Figures/cmp_removable.pdf used on input line 398.
+(pdftex.def)             Requested size: 165.8525pt x 99.6344pt.
+
+<Figures/cmp_sem2syn.pdf, id=134, 794.97pt x 614.295pt>
+File: Figures/cmp_sem2syn.pdf Graphic file (type pdf)
+
+<use Figures/cmp_sem2syn.pdf>
+Package pdftex.def Info: Figures/cmp_sem2syn.pdf used on input line 400.
+(pdftex.def)             Requested size: 166.94862pt x 105.10474pt.
+
+<Figures/cmp_linked.pdf, id=135, 794.97pt x 614.295pt>
+File: Figures/cmp_linked.pdf Graphic file (type pdf)
+
+<use Figures/cmp_linked.pdf>
+Package pdftex.def Info: Figures/cmp_linked.pdf used on input line 402.
+(pdftex.def)             Requested size: 206.68732pt x 100.5326pt.
+
+(C:\Users\honghan.wu\Documents\GitHub\rald\rald.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12 <C:/Users/honghan.wu/Documents/GitHub/rald/Figures/cmp_removable.pdf> <C:/
+Users/honghan.wu/Documents/GitHub/rald/Figures/cmp_sem2syn.pdf, page is rotated
+ 90 degrees> <C:/Users/honghan.wu/Documents/GitHub/rald/Figures/cmp_linked.pdf,
+ page is rotated 90 degrees>]) [13] (C:\Users\honghan.wu\Documents\GitHub\rald\
+rald.aux) ) 
 Here is how much of TeX's memory you used:
- 14578 strings out of 493921
- 248214 string characters out of 3144860
- 294716 words of memory out of 3000000
- 17513 multiletter control sequences out of 15000+200000
- 50015 words of font info for 75 fonts, out of 3000000 for 9000
+ 14603 strings out of 493921
+ 248697 string characters out of 3144860
+ 298787 words of memory out of 3000000
+ 17534 multiletter control sequences out of 15000+200000
+ 50709 words of font info for 77 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 56i,11n,55p,1926b,544s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/M
-iKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on rald.pdf (9 pages, 911536 bytes).
+ 56i,14n,55p,1926b,544s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/t
+imes/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on rald.pdf (13 pages, 987103 bytes).
 PDF statistics:
- 172 PDF objects out of 1000 (max. 8388607)
+ 230 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
