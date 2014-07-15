@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.12.10)  14 JUL 2014 17:55
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.12.10)  15 JUL 2014 01:18
 entering extended mode
 **C:/Users/honghan.wu/Documents/GitHub/rald/rald.tex
 (C:/Users/honghan.wu/Documents/GitHub/rald/rald.tex
@@ -842,146 +842,129 @@ File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 82.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 87.
 
-(C:\Users\honghan.wu\Documents\GitHub\rald\intro.tex
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
-) [1
-
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (5.85551pt too wide) in paragraph at lines 107--119
- [][] 
+Overfull \hbox (5.11891pt too wide) in paragraph at lines 83--84
+[]\T1/ptm/m/n/9 Data re-dun-dancy re-sides in most, if not all, in-for-ma-tion 
+sys-tems. Linked
  []
 
-<Figures/rd_example.pdf, id=12, 596.98032pt x 844.65562pt>
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 87.
+(C:\Users\honghan.wu\Documents\GitHub\rald\intro.tex [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}])
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 95.
+ [2]
+<Figures/rd_example.pdf, id=15, 596.98032pt x 844.65562pt>
 File: Figures/rd_example.pdf Graphic file (type pdf)
 
 <use Figures/rd_example.pdf>
 Package pdftex.def Info: Figures/rd_example.pdf used on input line 125.
-(pdftex.def)             Requested size: 161.91653pt x 109.34724pt.
+(pdftex.def)             Requested size: 129.53125pt x 64.71466pt.
 
-<Figures/rd_semantic.pdf, id=13, 596.98032pt x 844.65562pt>
+<Figures/rd_semantic.pdf, id=16, 596.98032pt x 844.65562pt>
 File: Figures/rd_semantic.pdf Graphic file (type pdf)
 
 <use Figures/rd_semantic.pdf>
 Package pdftex.def Info: Figures/rd_semantic.pdf used on input line 127.
-(pdftex.def)             Requested size: 149.11284pt x 109.34724pt.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 133.
+(pdftex.def)             Requested size: 119.28844pt x 64.71466pt.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 134.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [2] [3 <C:/Users/honghan.wu/Documents/GitHub/rald/Figures/rd_example.pdf> <C:
-/Users/honghan.wu/Documents/GitHub/rald/Figures/rd_semantic.pdf
+) [3 <C:/Users/honghan.wu/Documents/GitHub/rald/Figures/rd_example.pdf> <C:/Use
+rs/honghan.wu/Documents/GitHub/rald/Figures/rd_semantic.pdf
 
 pdfTeX warning: pdflatex.EXE (file C:/Users/honghan.wu/Documents/GitHub/rald/Fi
 gures/rd_semantic.pdf): PDF inclusion: multiple pdfs with page group included i
 n a single page
->] <Figures/tbox_reuse.pdf, id=57, 614.295pt x 794.97pt>
+>] <Figures/tbox_reuse.pdf, id=56, 614.295pt x 794.97pt>
 File: Figures/tbox_reuse.pdf Graphic file (type pdf)
 
 <use Figures/tbox_reuse.pdf>
-Package pdftex.def Info: Figures/tbox_reuse.pdf used on input line 163.
-(pdftex.def)             Requested size: 102.3143pt x 44.84074pt.
- [4 <C:/Users/honghan.wu/Documents/GitHub/rald/Figures/tbox_reuse.pdf>] [5]
-<Figures/two_dimension.pdf, id=87, 722.7pt x 542.025pt>
+Package pdftex.def Info: Figures/tbox_reuse.pdf used on input line 161.
+(pdftex.def)             Requested size: 102.3143pt x 27.76941pt.
+ [4] [5 <C:/Users/honghan.wu/Documents/GitHub/rald/Figures/tbox_reuse.pdf>]
+<Figures/two_dimension.pdf, id=85, 722.7pt x 542.025pt>
 File: Figures/two_dimension.pdf Graphic file (type pdf)
 
 <use Figures/two_dimension.pdf>
-Package pdftex.def Info: Figures/two_dimension.pdf used on input line 186.
-(pdftex.def)             Requested size: 152.50407pt x 102.99715pt.
+Package pdftex.def Info: Figures/two_dimension.pdf used on input line 188.
+(pdftex.def)             Requested size: 133.44543pt x 70.20822pt.
  [6 <C:/Users/honghan.wu/Documents/GitHub/rald/Figures/two_dimension.pdf>]
-Overfull \hbox (43.10466pt too wide) in paragraph at lines 219--220
-$\OML/cmm/m/it/10 P[]$\T1/ptm/m/n/10 . For the ex-am-ple of \T1/ptm/m/it/10 jef
-f-z-pan \T1/ptm/m/n/10 in Fig. 1[], the rule will be $\OT1/cmr/m/n/10 (\OMS/cms
-y/m/n/10 ;\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 foaf[]name\OMS/
-cmsy/m/n/10 g\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 foaf[]made\O
-MS/cmsy/m/n/10 g\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 ;\OT1/cmr/m/n/10 ) \OMS/cms
-y/m/n/10 !$
+Overfull \hbox (14.67757pt too wide) in paragraph at lines 223--224
+$\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 C[]\OMS/cmsy/m/n/10 j  \OML/cmm/m/it/10 f[
+]$\T1/ptm/m/n/10 . In \T1/ptm/m/it/10 jeff-z-pan\T1/ptm/m/n/10 's ex-am-ple, th
+e rule will be $\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ;\OML/cmm/m/it/10 ; \OMS/cmsy
+/m/n/10 f\OML/cmm/m/it/10 foaf[]name\OMS/cmsy/m/n/10 g\OML/cmm/m/it/10 ; \OMS/c
+msy/m/n/10 f\OML/cmm/m/it/10 foaf[]made\OMS/cmsy/m/n/10 g\OML/cmm/m/it/10 ; \OM
+S/cmsy/m/n/10 ;\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 !$
  []
 
-[7] (C:\Users\honghan.wu\Documents\GitHub\rald\related_work.tex) [8]
-Overfull \hbox (16.71614pt too wide) in paragraph at lines 291--292
-[]\T1/ptm/m/n/10 the se-man-tic re-dun-dancy ra-tio iden-ti-fied by EDP ap-proa
-ch, i.e. $[]$; 
+[7] (C:\Users\honghan.wu\Documents\GitHub\rald\related_work.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 304--304
+[]|\T1/ptm/m/n/7 User-generated con-
  []
 
-
-Overfull \hbox (13.74477pt too wide) in paragraph at lines 297--298
-[]\T1/ptm/m/n/10 the syn-tac-tic re-dun-dancy ra-tio iden-ti-fied by EDP ap-pro
-ach, i.e. $[]$; 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 307--307
- [][]$\T1/pcr/m/n/9 http : / / lod-[]cloud . net / versions / 2011-[]09-[]19 / 
-lod-[]cloud _ colored .$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 320--320
-[]|\T1/ptm/m/n/9 User-generated
- []
-
-[9] [10] [11] <Figures/cmp_removable.pdf, id=133, 1228.59pt x 794.97pt>
+[8] [9] [10] <Figures/cmp_removable.pdf, id=126, 1228.59pt x 794.97pt>
 File: Figures/cmp_removable.pdf Graphic file (type pdf)
 
 <use Figures/cmp_removable.pdf>
-Package pdftex.def Info: Figures/cmp_removable.pdf used on input line 398.
+Package pdftex.def Info: Figures/cmp_removable.pdf used on input line 393.
 (pdftex.def)             Requested size: 165.8525pt x 99.6344pt.
 
-<Figures/cmp_sem2syn.pdf, id=134, 794.97pt x 614.295pt>
+<Figures/cmp_sem2syn.pdf, id=127, 794.97pt x 614.295pt>
 File: Figures/cmp_sem2syn.pdf Graphic file (type pdf)
 
 <use Figures/cmp_sem2syn.pdf>
-Package pdftex.def Info: Figures/cmp_sem2syn.pdf used on input line 400.
+Package pdftex.def Info: Figures/cmp_sem2syn.pdf used on input line 395.
 (pdftex.def)             Requested size: 166.94862pt x 105.10474pt.
 
-<Figures/cmp_linked.pdf, id=135, 794.97pt x 614.295pt>
+<Figures/cmp_linked.pdf, id=128, 794.97pt x 614.295pt>
 File: Figures/cmp_linked.pdf Graphic file (type pdf)
 
 <use Figures/cmp_linked.pdf>
-Package pdftex.def Info: Figures/cmp_linked.pdf used on input line 402.
+Package pdftex.def Info: Figures/cmp_linked.pdf used on input line 397.
 (pdftex.def)             Requested size: 206.68732pt x 100.5326pt.
 
-(C:\Users\honghan.wu\Documents\GitHub\rald\rald.bbl
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (0.2131pt too wide) in paragraph at lines 408--409
+\T1/ptm/m/n/10 dancy. The most straight-for-ward con-clu-sion is that data re-d
+un-dan-cies in Linked Datasets
+ []
 
- [12 <C:/Users/honghan.wu/Documents/GitHub/rald/Figures/cmp_removable.pdf> <C:/
-Users/honghan.wu/Documents/GitHub/rald/Figures/cmp_sem2syn.pdf, page is rotated
- 90 degrees> <C:/Users/honghan.wu/Documents/GitHub/rald/Figures/cmp_linked.pdf,
- page is rotated 90 degrees>]) [13] (C:\Users\honghan.wu\Documents\GitHub\rald\
-rald.aux) ) 
+[11 <C:/Users/honghan.wu/Documents/GitHub/rald/Figures/cmp_removable.pdf> <C:/U
+sers/honghan.wu/Documents/GitHub/rald/Figures/cmp_sem2syn.pdf, page is rotated 
+90 degrees> <C:/Users/honghan.wu/Documents/GitHub/rald/Figures/cmp_linked.pdf, 
+page is rotated 90 degrees>]
+(C:\Users\honghan.wu\Documents\GitHub\rald\rald.bbl) [12]
+(C:\Users\honghan.wu\Documents\GitHub\rald\rald.aux) ) 
 Here is how much of TeX's memory you used:
- 14603 strings out of 493921
- 248697 string characters out of 3144860
- 298787 words of memory out of 3000000
- 17534 multiletter control sequences out of 15000+200000
- 50709 words of font info for 77 fonts, out of 3000000 for 9000
+ 14598 strings out of 493921
+ 248678 string characters out of 3144860
+ 296788 words of memory out of 3000000
+ 17532 multiletter control sequences out of 15000+200000
+ 48971 words of font info for 72 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 56i,14n,55p,1926b,544s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/t
-imes/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on rald.pdf (13 pages, 987103 bytes).
+ 56i,12n,55p,1385b,545s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/M
+iKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.p
+fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on rald.pdf (12 pages, 943144 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
+ 210 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 

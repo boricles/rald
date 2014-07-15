@@ -1,8 +1,14 @@
-\subsection{What is data redundancy with linked data?}
+%\subsection{What is data redundancy with linked data?}
+Data redundancy has different meanings in different contexts. In database community, data redundancy means that the same piece of data is stored in \emph{multiple places} in a database system, while in information theory it means the \emph{wasted space} used to transmit certain data. In this paper, we focus on data redundancy in Linked Data, which means the \emph{wasted space} used to represent certain meaning in either stand-alone data space or the Web of Data environment.
 
-\subsection{Why is it of special interest to linked data consumption?}
-\subsubsection{The Good}
+%\subsection{Why is it of special interest to linked data consumption?}
+Depending on the sceraios, data redundancy in Linked Data might have different effects to data consumption tasks. Sometimes Linked Data redundancy might be unwelcome. For example, for storage or exchange purpose, the redundancy will cause unnecessary resource consumptions, e.g. more disk spaces or longer time to download a dump file from the Web. In other occasions the redundancy of the data can be utilised to facilitate the task on hand. For example, in Ontology Based Data Access (OBDA) tasks, A-Box redundancy can be utilised to avoid unnecessary query rewritings so that the efficiency of the system can be improved. 
 
-\subsubsection{The Bad}
+Redundancies in Linked Data have effects on a wide range of applications including data publishing, query answering (in SPARQL endpoints), OBDA, and ontology reasoning. Existing work~\cite{joshi2013logical,cure2014waterfowl,fernandez2013binary} either focuses on RDF data compression or provides succinct data structure for data access. Little attention has been put on making the data redundancy explicit and available to Linked Data stakeholders. For data consumers, a good knowledge about data redundancies in interested datasets will help users either make use of them or choose the best technique to avoid them. For data publishers, such knowledge will guide them in making the right decisions like reusing the right vocabularies, linking to right datasets or sometimes not linking at all. In this paper, we focus on revealing the redundancies in Linked Data by both a qualitative analysis of systematic redundancy categorisation and an quantitative analysis on various datasets covering different domains.
 
-\subsubsection{The Ugly}
+The rest of the paper is organised as follows. Section~\ref{sec:gp} gives an discussion about the categorisation of redundancies in Linked Data. Section~\ref{sec:method} proposes our redundancy analysis methodology which covers two different dimensions. In section~\ref{sec:related}, we briefly introduces related work. Section~\ref{sec:result} gives the detailed analysis results on real world datasets. Finally, we conclude the work in section~\ref{sec:conclusion}.
+%\subsubsection{The Good}
+
+%\subsubsection{The Bad}
+
+%\subsubsection{The Ugly}
